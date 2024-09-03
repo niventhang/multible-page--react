@@ -51,7 +51,7 @@ body {
 }
 
 .bg-color {
-  background-color: #191919;
+  background-color: #191919 !important;
 }
 
 a {
