@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("./assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+:root {
+  ---bgcolor: #090909;
+  ---textcolor: #717173;
+  ---cardcolor: #f00c53;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.714286;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(---bgcolor);
+  color: white !important;
+  font-weight: 400;
+}
+
+.fw-6 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.w-10 {
+  width: 150px;
+}
+
+.h7 {
+  font-size: 60px;
+  font-family: "Montserrat-Bold";
+  line-height: 75px;
+}
+
+.h0 {
+  font-size: 50px;
+  font-family: "Montserrat-Bold";
+
+}
+
+.letterspecing {
+  letter-spacing: 6px;
+  font-size: 16px;
+}
+
+.bg-color {
+  background-color: #191919;
+}
+
+a {
+  cursor: move !important;
+}
+
+.nav-tabs {
+  border: none;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: white !important;
+
+}
+
+.nav-tabs .nav-link.active {
+  color: red !important;
+  background-color: #191919;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+.navbar-toggler {
+  color: white !important;
+  background-color: white;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: red
+}
+
+.hoverpink:hover {
+  background-color: var(---cardcolor) !important;
+}
+
+.bg-img {
+  background: url("./assets/images/portfolio-3.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 400px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.minheight{
+  min-height: 400px;
+}
+@media (max-width:576px) {
+  .h7 {
+      font-size: 32px;
+      line-height: 60px;
+
+  }
+
+  .h0 {
+      font-size: 32px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width:992px) {
+  .w-80 {
+      width: 97%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .w50 {
+      width: 50%;
   }
 }

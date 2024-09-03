@@ -1,37 +1,27 @@
 // Filename - App.js
 
 import React from "react";
-import Navbar from "./components/Navbar";
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-} from "react-router-dom";
+import Navbars from "./components/Navbars";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
-import Blogs from "./pages/blogs";
-import SignUp from "./pages/signup";
+import Service from "./pages/service";
 import Contact from "./pages/contact";
+import Portfolio from "./pages/portfolio";
 
 function App() {
-	return (
-		<Router>
-			<Navbar />
-			<Routes>
-				<Route exact path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route
-					path="/contact"
-					element={<Contact />}
-				/>
-				<Route path="/blogs" element={<Blogs />} />
-				<Route
-					path="/sign-up"
-					element={<SignUp />}
-				/>
-			</Routes>
-		</Router>
-	);
+  return (
+    <Router>
+      <Navbars />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/service" element={<Service />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

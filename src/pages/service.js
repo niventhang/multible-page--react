@@ -1,5 +1,4 @@
 import React from "react";
-import Navbars from "../components/Navbars";
 import Footer from "../components/Footer";
 import MainLayOut from "../Layout/MainLayOut";
 import { Container, Row } from "react-bootstrap";
@@ -9,43 +8,18 @@ import Images from "../components/Images";
 import Cards from "../components/Cards";
 import { CardItems } from "../components/Cards";
 import Contact from "../components/Contact";
-import "../App.css";
-import Navtabs from "../components/Navtabs";
 import Bannerlogo from "../assets/images/Bannerlogo.jpg";
-import Abouts from "../assets/images/about-1.jpg";
 
-function About() {
+function Service() {
   return (
     <MainLayOut>
-      <MainLayOut style="bg-color py-lg-5">
+      <MainLayOut style="text-center pt-5">
+        <Text style="h7 fw-bold lh-base" text="My Awesome Service " />
+        <Text
+          style="w50 m-auto"
+          text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
+        />
         <Container>
-          <Row className="my-lg-5">
-            <MainLayOut style="col-12 col-lg-6 ">
-              <Images style="w-100" link={Abouts} />
-            </MainLayOut>
-            <MainLayOut style="col-12 col-lg-6 mt-5 ">
-              <Text
-                style="h7 fw-bold text-center  text-center text-lg-start"
-                text="About Me"
-              />
-              <Text
-                style="mb-4  text-center text-lg-start"
-                text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered  in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,"
-              />
-              <Navtabs />
-            </MainLayOut>
-          </Row>
-        </Container>
-      </MainLayOut>
-      <MainLayOut>
-        <Container>
-          <MainLayOut style="text-center pt-5">
-            <Text style="h7 fw-bold lh-base" text="My Awesome Service " />
-            <Text
-              style="w50 m-auto"
-              text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration."
-            />
-          </MainLayOut>
           <Row className="my-5">
             <Cards />
           </Row>
@@ -86,4 +60,4 @@ function About() {
   );
 }
 
-export default About;
+export default Service;
