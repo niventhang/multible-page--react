@@ -1,9 +1,8 @@
 // Filename - App.js
-
 import React from "react";
 import Navbars from "./components/Navbars";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages";
+import Home from "./pages/home";
 import About from "./pages/about";
 import Service from "./pages/service";
 import Contact from "./pages/contact";
@@ -14,7 +13,8 @@ function App() {
     <Router>
       <Navbars />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route index  element={<Home />} />
+        <Route path="/home"  element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/portfolio" element={<Portfolio />} />
