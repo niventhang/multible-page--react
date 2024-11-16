@@ -7,104 +7,63 @@ import portfolio2 from "../assets/images/portfolio-2.jpg";
 import portfolio3 from "../assets/images/portfolio-3.jpg";
 import portfolio4 from "../assets/images/portfolio-4.jpg";
 
-export let objdata = [
-  {
-    name: "Business Stratagy",
-    discription:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    name: "Website Development",
-    discription:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    name: "Markting Reporting",
-    discription:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    name: "Mobile  Developments",
-    discription:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    name: "Business Stratagy",
-    discription:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
-  {
-    name: "Markting Reporting",
-    discription:
-      "I throw myself down among the tall grass by the stream as I lie close to the earth.",
-  },
+// Data for the card and object sections
+const objdata = [
+  { name: "Business Strategy", discription: "I throw myself down among the tall grass by the stream as I lie close to the earth." },
+  { name: "Website Development", discription: "Exploring the world of web development with various technologies." },
+  { name: "Marketing Reporting", discription: "Comprehensive analysis and reporting for marketing campaigns." },
+  { name: "Mobile Developments", discription: "Building responsive and user-friendly mobile applications." },
+  { name: "Business Strategy", discription: "I throw myself down among the tall grass by the stream as I lie close to the earth." },
+  { name: "Marketing Reporting", discription: "A deep dive into campaign results and actionable insights." },
 ];
-export const cardData = [
-  {
-    img: portfolio1,
-    skil: "Devlopment",
-    discription: "geting tickts to the big show",
-  },
-  {
-    img: portfolio2,
-    skil: "Devlopment",
-    discription: "geting tickts to the big show",
-  },
-  {
-    img: portfolio3,
-    skil: "Devlopment",
-    discription: "geting tickts to the big show",
-  },
-  {
-    img: portfolio4,
-    skil: "Devlopment",
-    discription: "geting tickts to the big show",
-  },
-  {
-    img: portfolio2,
-    skil: "Devlopment",
-    discription: "geting tickts to the big show",
-  },
-  {
-    img: portfolio1,
-    skil: "Devlopment",
-    discription: "geting tickts to the big show",
-  },
+
+const cardData = [
+  { img: portfolio1, skil: "Development", discription: "Getting tickets to the big show" },
+  { img: portfolio2, skil: "Development", discription: "Building robust websites with React" },
+  { img: portfolio3, skil: "Development", discription: "Designing modern and responsive interfaces" },
+  { img: portfolio4, skil: "Development", discription: "Creating engaging user experiences" },
+  { img: portfolio2, skil: "Development", discription: "Working with dynamic content and APIs" },
+  { img: portfolio1, skil: "Development", discription: "Full-stack web development expertise" },
 ];
-let CardDatas = cardData.map((Carditems) => (
-  <div
-    className="col-12 col-md-6 col-lg-4 py-2 py-lg-3 my-2 minheight"
-    style={{ background: `url(${Carditems.img}) no-repeat` }}
-  >
-    <div className="p-5">
-      <MainLayOut>
-        <div>
-          <div>
-            <Text text={Carditems.skil} />
-          </div>
-          <Text style="fs-4 lh-base fw-bold" text={Carditems.discription} />
-        </div>
-      </MainLayOut>
-    </div>
-  </div>
-));
-let mapData = objdata.map((items) => (
-  <MainLayOut style="col-12 col-md-6 col-lg-4 py-2 py-lg-3">
-    <Card className="bg-dark text-white p-3 p-lg-5 hoverpink">
-      <Card.Body>
-        <Card.Title>
-          <Text style="fs-3" text={items.name} />
-        </Card.Title>
-        <Text text={items.discription} />
-      </Card.Body>
-    </Card>
-  </MainLayOut>
-));
+
 export function CardItems() {
-  return CardDatas;
+  return (
+    <>
+      {cardData.map((Carditems, index) => (
+        <div
+          key={index} 
+          className="col-12 col-md-6 col-lg-4 py-2 py-lg-3 my-2 minheight"
+          style={{ background: `url(${Carditems.img}) no-repeat` }}
+        >
+          <div className="p-5">
+            <MainLayOut>
+              <div>
+                <Text text={Carditems.skil} />
+                <Text style="fs-4 lh-base fw-bold" text={Carditems.discription} />
+              </div>
+            </MainLayOut>
+          </div>
+        </div>
+      ))}
+    </>
+  );
 }
 
-function Cards() {
-  return mapData;
+export default function Cards() {
+  return (
+    <>
+      {objdata.map((items, index) => (
+        <MainLayOut key={index} style="col-12 col-md-6 col-lg-4 py-2 py-lg-3">
+          <Card className="bg-dark text-white p-3 p-lg-5 hoverpink">
+            <Card.Body>
+              <Card.Title>
+                <Text style="fs-3" text={items.name} />
+              </Card.Title>
+              <Text text={items.discription} />
+            </Card.Body>
+          </Card>
+        </MainLayOut>
+      ))}
+    </>
+  );
 }
-export default Cards;
