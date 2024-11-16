@@ -4,7 +4,7 @@ import Tabs from "react-bootstrap/Tabs";
 import Text from "../components/Text";
 
 function Navtabs() {
-  const [key, setKey] = useState("Main"); // Default active tab
+  const [key, setKey] = useState("Main"); 
 
   useEffect(() => {
     const interval = setInterval(() => {

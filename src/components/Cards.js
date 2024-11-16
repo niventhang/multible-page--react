@@ -7,7 +7,6 @@ import portfolio2 from "../assets/images/portfolio-2.jpg";
 import portfolio3 from "../assets/images/portfolio-3.jpg";
 import portfolio4 from "../assets/images/portfolio-4.jpg";
 
-// Data for the card and object sections
 const objdata = [
   { name: "Business Strategy", discription: "I throw myself down among the tall grass by the stream as I lie close to the earth." },
   { name: "Website Development", discription: "Exploring the world of web development with various technologies." },
