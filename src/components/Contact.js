@@ -45,7 +45,7 @@ function Contact() {
       />
 
       <Text style="h7 fw-bold lh-base" text="Hire Me." />
-      <Text text="I am available for freelance work. Connect with me via phone: 7339628276 or email: niventhang6@gmail.com" />
+      <Text text="I am available for freelance work. Connect with me via phone: 8838295382 or email: niventhang6@gmail.com" />
 
       <Form ref={forms} onSubmit={sendEmail}>
         <Form.Group className="mb-3" controlId="user_name">
