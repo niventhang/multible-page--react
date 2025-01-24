@@ -16,8 +16,8 @@ function Contact() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_2cer1wn", "template_xpburnt", forms.current, {
-        publicKey: "U0vN6ww9BrU7Y_JSF",
+      .sendForm("service_esm8ooc", "template_jx8nl2b", forms.current, {
+        publicKey: "_hpUuztZKGXTE-cH2",
       })
       .then(
         () => {
@@ -45,7 +45,7 @@ function Contact() {
       />
 
       <Text style="h7 fw-bold lh-base" text="Hire Me." />
-      <Text text="I am available for freelance work. Connect with me via phone: 7339628276 or email: prakashvadakadu8@gmail.com" />
+      <Text text="I am available for freelance work. Connect with me via phone: 7339628276 or email: niventhang6@gmail.com" />
 
       <Form ref={forms} onSubmit={sendEmail}>
         <Form.Group className="mb-3" controlId="user_name">

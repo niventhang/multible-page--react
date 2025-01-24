@@ -20,7 +20,7 @@ function Home() {
         <Row className="text-center text-lg-start">
           <MainLayOut style="col-12 col-lg-6 d-flex flex-column justify-content-center vh-100">
             <Text style="letterspecing text-capitalize" text="Welcome to my World" />
-            <Text style="h7 fw-bold" text="Hi, I’m Prakash" />
+            <Text style="h7 fw-bold" text="Hi, I’m Niventhan" />
             <Animation style="h7 fw-bold text-danger" />
             <Text style="h0" text="based in India." />
           </MainLayOut>
